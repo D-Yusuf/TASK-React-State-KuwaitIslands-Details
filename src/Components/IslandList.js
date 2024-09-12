@@ -1,13 +1,14 @@
-import { useState } from "react";
-import islands from "../data/islands";
+import { useContext, useState } from "react";
 import Island from "./Island";
+import IslandsContext from "../IslandsContext";
 
-export default function IslandList() {
+export default function IslandList({setIsland}) {
   const [query, setQuery] = useState("");
-
+  const [islands] = useContext(IslandsContext)
+  // console.log(islands)
   let islandsArray = islands
     .filter((island) => island.name.toLowerCase().includes(query.toLowerCase()))
-    .map((island) => <Island island={island} />);
+    .map((island) => <Island onClick={()=>setIsland(island)} island={island} />);
   return (
     <div>
       <input

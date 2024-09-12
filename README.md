@@ -8,7 +8,7 @@ In this website, whenever a user presses on an island, it will appear on the rig
 
 For the bonus 🎁, a user can book a trip to the island they choose by typing their information, and confirming their booking.
 
-## 🍋 Part 1: Change the island
+## 🍋 Part 1: Change the island 
 
 1. In `App.js` we are rendring the `IslandList` and `IslandForm`. Island form is taking the value `island` that you have to make a state.
 2. Change the variable island to a state called `island` that holds the island to be shown with an intial value of boubyan island object.
@@ -16,6 +16,8 @@ For the bonus 🎁, a user can book a trip to the island they choose by typing t
 4. Pass this `setIsland` to `IslandList`.
 5. From `IslandList` let's pass it again to `Island`.
 6. In `Island` add an `onClick` function to the whole `div` that calls our `setIsland` and give it the current island.
+
+##### DONE EZ
 
 ## 🤼 Part 2: Form
 
